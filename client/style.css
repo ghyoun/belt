@@ -1,0 +1,25 @@
+#playBox {
+    text-align: center;
+    border: 1px solid black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px 5px 10px 5px;
+}
+
+#leaderboard {
+    margin-top: 10px;
+}
+
+#newQuestionForm {
+    margin-top: 20px;
+}
+
+textarea {
+    width: 800px;
+}
+
+#error {
+    color: red;
+    text-decoration-color: red;
+    text-align: center;
+}

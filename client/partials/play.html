@@ -1,0 +1,48 @@
+<ng-include src="'../partials/navbar.html'"></ng-include>
+<div class='container'>
+    <div class='row'>
+        <div class='col-md-10 col-md-offset-1'>
+            <h2>Hi {{currentUser}}!</h2>
+            <h3>Choose an answer for each of the questions and submit the test once done</h3>
+            <h3>Good Luck!</h3>
+        </div>
+
+        <div class='col-md-10 col-md-offset-1'>
+            <div class='col-md-10 col-md-offset-1'>
+                <form>
+                    <h2>{{questions[0].question}}</h2>
+                    <fieldset id='group1'>
+                        <input type='radio' ng-model="answer1" name='group1' value='correct'>{{questions[0].correct_answer}}</input>
+                        <input type='radio' ng-model="answer1" name='group1' value='wrong'>{{questions[0].fake_answer_1}}</input>
+                        <input type='radio' ng-model="answer1" name='group1' value='wrong'>{{questions[0].fake_answer_2}}</input>
+                    </fieldset>
+                </form>
+                <form>
+                    <h2>{{questions[1].question}}</h2>
+                    <fieldset id='group1'>
+                        <input type='radio' ng-model="answer2" name='group2' value='correct'>{{questions[1].correct_answer}}</input>
+                        <input type='radio' ng-model="answer2" name='group2' value='wrong'>{{questions[1].fake_answer_1}}</input>
+                        <input type='radio' ng-model="answer2" name='group2' value='wrong'>{{questions[1].fake_answer_2}}</input>
+                    </fieldset>
+                </form>
+                <form>
+                    <h2>{{questions[2].question}}</h2>
+                    <fieldset id='group1'>
+                        <input type='radio' ng-model="answer3" name='group3' value='correct'>{{questions[2].correct_answer}}</input>
+                        <input type='radio' ng-model="answer3" name='group3' value='wrong'>{{questions[2].fake_answer_1}}</input>
+                        <input type='radio' ng-model="answer3" name='group3' value='wrong'>{{questions[2].fake_answer_2}}</input>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <div class='col-md-2 offset-6'>
+            <a href='#/'><button class='btn btn-secondary'>Cancel</button></a>
+        </div>
+        <div class='col-md-3'>
+            <button class='btn btn-secondary' ng-click='submitAnswers()'>Submit</button>
+        </div>
+        <div class='col-md-12' id='errors'>
+            <h4>{{error}}</h4>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+<ng-include src="'../partials/navbar.html'"></ng-include>
+<div class='container'>
+    <h2>New Question</h2>
+    <div class='row'>
+        <div class='col-md-10 col-md-offset-1' id='newQuestionForm'>
+            <form>
+                <div class='form-group row'>
+                    <label>Question:</label>
+                    <div class='col-md-11 col-md-offset-1'>
+                        <textarea class='form-control' ng-model='question'></textarea>
+                    </div>
+                </div>
+                <div class='form-group row'>
+                    <label>Correct Answer:</label>
+                    <div class='col-md-11 col-md-offset-1'>
+                        <textarea class='form-control' ng-model='correct_answer'></textarea>
+                    </div>
+                </div>
+                <div class='form-group row'>
+                    <label>Fake Answer 1:</label>
+                    <div class='col-md-11 col-md-offset-1'>
+                        <textarea class='form-control' ng-model='fake_answer_1'></textarea>
+                    </div>
+                </div>
+                <div class='form-group row'>
+                    <label>Fake Answer 2:</label>
+                    <div class='col-md-11 col-md-offset-1'>
+                        <textarea class='form-control' ng-model='fake_answer_2'></textarea>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class='col-md-2 offset-6'>
+            <a href='#/'><button class='btn btn-secondary'>Cancel</button></a>
+        </div>
+        <div class='col-md-3'>
+            <button class='btn btn-secondary' ng-click='addQuestion()'>Add Question</button>
+        </div>
+        <div class='col-md-12' id='errors'>
+            <h4>{{error}}</h4>
+        </div>
+    </div>
+</div>

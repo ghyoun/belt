@@ -1,0 +1,36 @@
+<ng-include src="'../partials/navbar.html'"></ng-include>
+<div class='container'>
+    <div class='row'>
+        <div class='col-md-6 col-md-offset-3' id='playBox'>
+            <a href='#/lets_play'><button class='btn btn-primary'>Play!</button></a>
+            <h3>Click the button above to start the trivia game!</h3>
+        </div>
+
+        <div class='col-md-10 col-md-offset-1' id='leaderboard'>
+            <div class='col-md-5 col-md-offset-7' id='search'>
+                <form class='form-inline'>
+                    <div class='form-group'>
+                        <label for='searchInput'>Search</label>
+                        <input type='text' class='form-control' id='searchInput' ng-model='searchFor'>
+                    </div>
+                </form>
+            </div>
+            <table class='table'>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Score</th>
+                        <th>Percentage</th>
+                    </tr>
+                </thead>
+                <tbody ng-repeat='result in results | orderBy:result.percentage'>
+                    <tr>
+                        <td>{{result.name}}</td>
+                        <td>{{result.correct}}/3</td>
+                        <td>{{result.percentage}}%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
